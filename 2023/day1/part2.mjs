@@ -32,7 +32,7 @@ const getIdxByDigitMap = (txt) => {
 };
 
 const extractCoordsFromLine = (line) => {
-  const idxByVal = getIdxByDigitMap(line);
+  const idxByDigit = getIdxByDigitMap(line);
   const coords = [];
 
   for (let i = 0; i < line.length; i++) {
@@ -41,8 +41,8 @@ const extractCoordsFromLine = (line) => {
 
     if (isNumber) {
       coords.push(char);
-    } else if (idxByVal[i]) {
-      coords.push(idxByVal[i]);
+    } else if (idxByDigit[i]) {
+      coords.push(idxByDigit[i]);
     }
   }
 
